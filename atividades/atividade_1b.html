@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1B</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <h1><span><a class="voltar" href="../index.html">Voltar</a></span>Atividade 1B</h1>
+    <div class="container">
+    <form>
+        <label for="nota1">Nota 1:</label><br>
+        <input type="text" name="nota1" id="nota1" placeholder="Digite a sua 1° nota">
+        <br>
+        <label for="nota2">Nota 2:</label><br>
+        <input type="text" name="nota2" id="nota2" placeholder="Digite a sua 2 nota">
+        <br>
+        <button onclick="descobrir_media()" id="submit">Enviar</button>
+
+    </form>
+
+    <h2 id="media_final"></h2>
+    <h2 id="situacao"></h2>
+
+</div>
+
+    <script>
+        function descobrir_media() {
+            let nota1 = parseFloat(document.getElementById("nota1").value);
+            let nota2 = parseFloat(document.getElementById("nota2").value);
+            let media = (nota1 + nota2) / 2;
+
+            let situacao_h1 = document.getElementById("situacao");
+
+            document.getElementById("media_final").innerHTML = "Sua média final foi : " + media + "<br>";
+
+            if (media >= 6) {
+                situacao_h1.innerHTML = "Situação : Aprovado";
+                situacao_h1.style.color = "blue";
+            }
+            else {
+                situacao_h1.innerHTML = "Situação : Reprovado";
+                situacao_h1.style.color = "red";
+            }
+
+            event.preventDefault();
+        }
+    </script>
+
+</body>
+
+</html>

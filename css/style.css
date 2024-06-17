@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p{
+    text-align: center;
+    background-color: rgb(164, 201, 206);
+    padding: 30px;
+    width: 50%;
+    margin: auto;
+    font-size: larger;
+
+}
+
+p:hover{
+    background-color: rgb(171, 214, 219);
+    cursor: pointer;
+}
+
+a.voltar{
+
+    text-decoration: none;
+    font-size: larger;
+    font-size: 20px;
+    float: left;
+}
+
+h1{
+    text-align: center;
+    background-color: cadetblue;
+    color: white;
+    padding: 10px;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+input{
+    padding: 20px;
+    font-size: large;
+    background-color: rgb(95, 158, 160);
+    border: none;
+    margin: 10px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+}
+
+input::placeholder{
+    color: white;
+}
+
+button{
+    padding: 15px;
+}
+
+ul{
+    text-align: left;
+}
+
+.lista{
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    margin-top: 100px;
+}

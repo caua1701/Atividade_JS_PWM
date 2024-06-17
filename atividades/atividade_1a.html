@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1A</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    
+    
+    <h1><span><a class="voltar" href="../index.html">Voltar</a></span>Atividade 1A</h1>
+
+    <div class="container">
+        <h2 id="media_final"></h2>
+        <h2 id="situacao"></h2>
+    </div>
+
+    <script>
+        let nota1 = parseFloat(prompt("Digite a sua 1° nota:"));
+        let nota2 = parseFloat(prompt("Digite a sua 2° nota:"));
+        let media = (nota1 + nota2) / 2;
+
+        let situacao_h1 = document.getElementById("situacao");
+
+        document.getElementById("media_final").innerHTML = "Sua média final foi : " + media + "<br>";
+
+        if (media >= 6) {
+            situacao_h1.innerHTML = "Situação : Aprovado";
+            situacao_h1.style.color = "blue";
+        }
+        else {
+            situacao_h1.innerHTML = "Situação : Reprovado";
+            situacao_h1.style.color = "red";
+        }
+    </script>
+
+</body>
+
+</html>

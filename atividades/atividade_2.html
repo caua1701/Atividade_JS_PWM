@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <h1><span><a class="voltar" href="../index.html">Voltar</a></span>Atividade 2</h1>
+
+    
+    <div class="container">
+
+        <h2>Calculadora de IMC</h2>
+
+        <form>
+            <label for="peso">Peso:</label><br>
+            <input type="text" name="peso" id="peso">
+            <br>
+            <label for="altura">Altura</label><br>
+            <input type="text" name="altura" id="altura">
+
+            <br>
+
+            <button onclick="imc()">Enviar</button>
+        </form>
+
+        <h2 id="resultado"></h2>
+
+    </div>
+
+    <script>
+        function imc() {
+            let peso = parseFloat(document.getElementById("peso").value);
+            let altura = parseFloat(document.getElementById("altura").value);
+            let imc = peso / (altura * altura);
+            let elemento_resultado = document.getElementById("resultado");
+
+            elemento_resultado.innerHTML = "Valor IMC : " + imc + "<br>";
+
+            if (imc >= 40) {
+                elemento_resultado.innerHTML += "Obesidade III (mórbida)";
+            }
+            else if (imc >= 35) {
+                elemento_resultado.innerHTML += "Obesidade II (severa) ";
+            }
+            else if (imc >= 30) {
+                elemento_resultado.innerHTML += "Obesidade I ";
+            }
+            else if (imc >= 25) {
+                elemento_resultado.innerHTML += "Acima do peso";
+            }
+            else if (imc >= 18.5) {
+                elemento_resultado.innerHTML += "Peso normal";
+            }
+            else if (imc >= 17) {
+                elemento_resultado.innerHTML += "Abaixo do peso";
+            }
+            else {
+                elemento_resultado.innerHTML += "Muito abaixo do peso";
+            }
+
+            event.preventDefault();
+        }
+    </script>
+
+</body>
+
+</html>

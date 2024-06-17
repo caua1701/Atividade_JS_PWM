@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <h1><span><a class="voltar" href="../index.html">Voltar</a></span>Atividade 3</h1>
+    <div class="lista">
+
+        <h2>Lista</h2>
+
+        <form>
+            <input type="radio" name="cor" id="vermelho" value="vermelho">
+            <label for="vermelho">Vermelho</label>
+            <input type="radio" name="cor" id="azul" value="azul">
+            <label for="vermelho">Azul</label>
+            <input type="radio" name="cor" id="verde" value="verde">
+            <label for="vermelho">Verde</label>
+
+            <label for="Texto para adicionar"></label>
+            <input type="text" name="texto" id="texto">
+
+            <button onclick="adicionar()">Adicionar</button>
+        </form>
+
+        <ul id="minhaLista">
+            <li>Café</li>
+            <li>Chá</li>
+        </ul>
+
+    </div>
+
+    <script>
+        function adicionar() {
+            let minhaLista = document.getElementById("minhaLista");
+            let texto = document.getElementById("texto").value;
+            let cor = document.querySelector("input[name='cor']:checked").value;
+
+            const node = document.createElement("li");
+            const textnode = document.createTextNode(texto);
+
+            node.appendChild(textnode);
+            minhaLista.appendChild(node);
+
+            switch (cor) {
+                case "vermelho":
+                    minhaLista.appendChild(node).style.color = "red";
+                    break;
+                case "azul":
+                    minhaLista.appendChild(node).style.color = "blue";
+                    break;
+                case "verde":
+                    minhaLista.appendChild(node).style.color = "green";
+                    break;
+
+            }
+
+
+
+            event.preventDefault();
+        }
+    </script>
+
+</body>
+
+</html>
